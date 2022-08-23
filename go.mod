@@ -1,11 +1,13 @@
-module github.com/hashicorp/terraform-provider-scaffolding
+module github.com/cemdorst/terraform-provider-azion
 
 go 1.18
 
 require (
+	github.com/cemdorst/apiclient v0.0.4
 	github.com/hashicorp/terraform-plugin-docs v0.13.0
 	github.com/hashicorp/terraform-plugin-log v0.7.0
-	github.com/hashicorp/terraform-plugin-sdk/v2 v2.21.0
+	github.com/hashicorp/terraform-plugin-sdk/v2 v2.20.0
+	github.com/mitchellh/hashstructure/v2 v2.0.2
 )
 
 require (
