@@ -26,31 +26,35 @@ func init() {
 	// }
 }
 
-func New() *schema.Provider {
-	return &schema.Provider{
-		Schema: map[string]*schema.Schema{
-			"apikey": &schema.Schema{
-				Type:        schema.TypeString,
-				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("AZION_APIKEY", nil),
+func New(version string) func() *schema.Provider {
+	return func() *schema.Provider {
+		p := &schema.Provider{
+			Schema: map[string]*schema.Schema{
+				"apikey": &schema.Schema{
+					Type:        schema.TypeString,
+					Optional:    true,
+					DefaultFunc: schema.EnvDefaultFunc("AZION_APIKEY", nil),
+				},
 			},
-		},
-		DataSourcesMap: map[string]*schema.Resource{
-			"azion_idns_data": DataSourceIDNS(),
-		},
-		ResourcesMap: map[string]*schema.Resource{
-		},
-		ConfigureContextFunc: providerConfigure,
+			DataSourcesMap: map[string]*schema.Resource{
+				"azion_idns_data": DataSourceIDNS(),
+			},
+			ResourcesMap: map[string]*schema.Resource{},
+		}
+		p.ConfigureContextFunc = configure(version, p)
+		return p
 	}
 
 }
 
-func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}, diag.Diagnostics) {
-	var diags diag.Diagnostics
+func configure(version string, p *schema.Provider) func(ctx context.Context, d *schema.ResourceData) (any, diag.Diagnostics) {
+	return func(ctx context.Context, d *schema.ResourceData) (any, diag.Diagnostics) {
+		var diags diag.Diagnostics
 
-	var c apiclient.Client
+		var c apiclient.Client
 
-	c.New(d.Get("apikey").(string), HostURL)
+		c.New(d.Get("apikey").(string), HostURL)
 
-	return &c, diags
+		return &c, diags
+	}
 }

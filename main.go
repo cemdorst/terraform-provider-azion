@@ -4,7 +4,6 @@ import (
 	"flag"
 
 	"github.com/cemdorst/terraform-provider-azion/internal/provider"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 )
 
@@ -36,14 +35,9 @@ func main() {
 	opts := &plugin.ServeOpts{
 		Debug: debugMode,
 
-		// TODO: update this string with the full name of your provider as used in your configs
-		//ProviderAddr: "registry.terraform.io/cemdorst/azion",
 		ProviderAddr: "github.com/cemdorst/terraform-provider-azion",
 
-		//ProviderFunc: provider.New(),
-		ProviderFunc: func() *schema.Provider {
-			return provider.New()
-		},
+		ProviderFunc: provider.New(version),
 	}
 
 	plugin.Serve(opts)

@@ -95,9 +95,9 @@ func dataSourceIDNSRead(ctx context.Context, d *schema.ResourceData, meta interf
 	}
 
 	hash, err := hashstructure.Hash(result, hashstructure.FormatV2, nil)
-		if err != nil {
-			diag.Errorf("unable to set `%s` attribute: %s", result, err)
-		}
+	if err != nil {
+		diag.Errorf("unable to create hash from attribute: %s", err)
+	}
 
 	d.Set("hosted_zones", flattenResults(result))
 	d.SetId((fmt.Sprintf("%d", hash)))
