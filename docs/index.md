@@ -13,8 +13,8 @@ description: |-
 ## Example Usage
 
 ```terraform
-provider "scaffolding" {
-  # example configuration here
+provider "azion" {
+  apikey = "yourapikeyhere"
 }
 ```
 
