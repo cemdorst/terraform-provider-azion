@@ -1,4 +1,4 @@
-Azion Terraform Provider (WIP)
+Unofficial Azion Terraform Provider (WIP)
 ==================
 
 - Documentation: https://registry.terraform.io/providers/cemdorst/azion/latest/docs
@@ -6,7 +6,7 @@ Azion Terraform Provider (WIP)
 Requirements
 ------------
 
--	[Terraform](https://www.terraform.io/downloads.html) 0.10.x
+-	[Terraform](https://www.terraform.io/downloads.html) 0.14.x
 -	[Go](https://golang.org/doc/install) 1.18 (to build the provider plugin)
 
 Building The Provider
