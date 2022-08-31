@@ -37,7 +37,8 @@ func New(version string) func() *schema.Provider {
 				},
 			},
 			DataSourcesMap: map[string]*schema.Resource{
-				"azion_idns_data": DataSourceIDNS(),
+				"azion_idns_zones": DataSourceIDNS(),
+				"azion_idns_zone":  DataSourceIDNSID(),
 			},
 			ResourcesMap: map[string]*schema.Resource{},
 		}
