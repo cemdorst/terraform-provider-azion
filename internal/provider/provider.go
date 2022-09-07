@@ -30,15 +30,16 @@ func New(version string) func() *schema.Provider {
 	return func() *schema.Provider {
 		p := &schema.Provider{
 			Schema: map[string]*schema.Schema{
-				"apikey": &schema.Schema{
+				"apikey": {
 					Type:        schema.TypeString,
 					Optional:    true,
 					DefaultFunc: schema.EnvDefaultFunc("AZION_APIKEY", nil),
 				},
 			},
 			DataSourcesMap: map[string]*schema.Resource{
-				"azion_idns_zones": DataSourceIDNS(),
-				"azion_idns_zone":  DataSourceIDNSID(),
+				"azion_idns_zones":   DataSourceIDNS(),
+				"azion_idns_zone":    DataSourceIDNSID(),
+				"azion_idns_records": DataSourceRecords(),
 			},
 			ResourcesMap: map[string]*schema.Resource{},
 		}
