@@ -30,8 +30,8 @@ github.com/armon/go-radix v1.0.0/go.mod h1:ufUuZ+zHj4x4TnLV4JWEpy2hxWSpsRywHrMgI
 github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5/go.mod h1:wHh0iHkYZB8zMSxRWpUBQtwG5a7fFgvEO+odwuTv2gs=
 github.com/bgentry/speakeasy v0.1.0 h1:ByYyxL9InA1OWqxJqqp2A5pYHUrCiAL6K3J+LKSsQkY=
 github.com/bgentry/speakeasy v0.1.0/go.mod h1:+zsyZBPWlz7T6j88CTgSN5bM796AkVf0kBD4zp0CCIs=
-github.com/cemdorst/apiclient v0.0.6 h1:Lf2nbFJeRlaaqzjax+GY1xx+lZC0yAmO1wAZRzDTLhY=
-github.com/cemdorst/apiclient v0.0.6/go.mod h1:xi8m3tJBm7Dbd0R8W2tvbNFEoWHVzoYFe4nmIGqHHTo=
+github.com/cemdorst/apiclient v0.0.10 h1:xIC6wg1oP0BP4eL1HAH4QrsDhCR4S9gPwLcOat18gDw=
+github.com/cemdorst/apiclient v0.0.10/go.mod h1:OG5F7Cw+aDqC2r63IQDgrKz2KaN/seKHswk2HEbUaj8=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=

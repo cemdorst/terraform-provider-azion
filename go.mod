@@ -3,7 +3,7 @@ module github.com/cemdorst/terraform-provider-azion
 go 1.18
 
 require (
-	github.com/cemdorst/apiclient v0.0.6
+	github.com/cemdorst/apiclient v0.0.10
 	github.com/hashicorp/terraform-plugin-docs v0.13.0
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.24.1
 	github.com/mitchellh/hashstructure/v2 v2.0.2
